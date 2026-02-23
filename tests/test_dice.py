@@ -5,12 +5,12 @@ from dice import roll, msg
 # --- Smoke Tests ---
 @pytest.mark.smoke
 def test_msg_content():
-    """This message string should match expected value."""
+    # This message string should match expected value.
     assert msg == "Roll the Dice!"
 
 @pytest.mark.smoke
 def test_roll_returns_integer(roll_result):
-    """roll() should return an integer."""
+    # roll() should return an integer.
     assert isinstance(roll_result, int)
     
 # --- Boundary Tests ---
@@ -23,7 +23,7 @@ def test_roll_within_valid_range(roll_result):
 @pytest.mark.parametrize("mocked_value", [1, 2, 3, 4, 5, 6])
 def test_roll_returns_each_face(mocked_value):
     # Verifies that roll() returns each value between 1 and 6 inclusive.
-    with patch("hello.np.random.randint", return_value=mocked_value):
+    with patch("dice.np.random.randint", return_value=mocked_value):
         assert roll() == mocked_value
         
 # --- Exception/Edge Case Tests ---
@@ -31,9 +31,9 @@ def test_roll_returns_each_face(mocked_value):
 @pytest.mark.parametrize("mocked_value", [0, 7])
 def test_roll_returns_out_of_bounds_mock(mocked_value):
     # Mocks response value to out of bounds values (0 and 7) for the sake of identifying a gap
-    with patch("hello.np.random.randint", return_value=mocked_value):
+    with patch("dice.np.random.randint", return_value=mocked_value):
         result = roll()
-        assert 1 > result > 6  # mocked values pass through, exposing need for validation
+        assert (result < 1) | (result > 6)  # mocked values pass through, exposing need for validation
 
 def test_roll_returns_consistent_type():
     # Checks to ensure numpy is returning strictly int values
