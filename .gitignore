@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# VSCode settings
+.vscode
