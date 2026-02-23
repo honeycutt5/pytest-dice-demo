@@ -1,4 +1,4 @@
-# pytest Dice Rolling – Test Automation Demo
+# Basic Dice Rolling App & Pytest Suite
 
 A Python test automation project demonstrating pytest best practices. Utilizes fixtures, parametrize, mocking, markers, and CI/CD integration.
 
