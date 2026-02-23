@@ -1,2 +1,29 @@
-# pytest-dice-demo
-Test suite for a simple dice-rolling app, following Python/pytest best practices and demonstrating CI/CD capabilities.
+# pytest Dice Rolling – Test Automation Demo
+
+A Python test automation project demonstrating pytest best practices
+including fixtures, parametrize, mocking, markers, and CI/CD integration.
+
+## Project Structure
+dice_project/
+├── src/
+│   └── dice.py        # Dice rolling application
+├── tests/
+│   ├── conftest.py     # Shared fixtures
+│   └── test_dice.py    # Test suite
+├── pytest.ini          # pytest configuration
+└── requirements.txt    # Dependencies
+
+## Running Tests
+
+Install dependencies:
+pip install -r requirements.txt
+
+Run all tests:
+pytest
+
+Run by marker:
+pytest -m smoke
+pytest -m boundary
+
+## CI/CD
+Tests run automatically on every push via GitHub Actions.

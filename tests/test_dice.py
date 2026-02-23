@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from hello import roll, msg
+from dice import roll, msg
 
 # --- Smoke Tests ---
 @pytest.mark.smoke

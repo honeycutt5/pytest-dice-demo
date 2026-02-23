@@ -1,5 +1,5 @@
 import pytest
-from hello import roll
+from dice import roll
 
 # Provides a single dice roll result to test
 @pytest.fixture
