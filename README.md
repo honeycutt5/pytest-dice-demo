@@ -1,17 +1,16 @@
 # pytest Dice Rolling – Test Automation Demo
 
-A Python test automation project demonstrating pytest best practices
-including fixtures, parametrize, mocking, markers, and CI/CD integration.
+A Python test automation project demonstrating pytest best practices. Utilizes fixtures, parametrize, mocking, markers, and CI/CD integration.
 
 ## Project Structure
 dice_project/
-├── src/
-│   └── dice.py        # Dice rolling application
-├── tests/
-│   ├── conftest.py     # Shared fixtures
-│   └── test_dice.py    # Test suite
-├── pytest.ini          # pytest configuration
-└── requirements.txt    # Dependencies
+ - src/
+     - dice.py        # Dice rolling application
+ - tests/
+     - conftest.py     # Initialization & fixtures
+     - test_dice.py    # Test suite
+ - pytest.ini          # pytest configuration
+ - requirements.txt    # Dependencies
 
 ## Running Tests
 
